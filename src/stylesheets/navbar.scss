@@ -1,0 +1,231 @@
+.landingHead {
+    // width: 100%;
+    // border-bottom: 10px solid #1D1D1D;
+    position: relative;
+    background: linear-gradient(44.04deg, #8E43AD 3.69%, #AA387D 23.45%, #D63251 48.76%, #F7352D 74.65%, #FA9B4F 94.55%);
+    overflow: hidden;
+  
+
+    .whiteCircle {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+    }
+    .heartborder {
+        position: relative;
+        z-index: 1;
+        img{
+            // user-drag: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+            width: 100%;
+        }
+    }
+
+    .circleTop {
+        top: 200px;
+        right: -250px;
+        width: 500px;
+        height: 500px;
+    }
+
+    .circleBottom {
+        bottom: -200px;
+        left: -250px;
+        width: 500px;
+        height: 500px;
+        z-index: 0;
+    }
+
+    .headerMusicBar
+    {
+        position: absolute;
+        top: 0;
+        left: 400px;
+        width: auto;
+        height: 100px;
+    }
+    .sticks {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 170px;
+        left: 1050px;
+
+
+            img{
+                user-drag: none;
+                user-select: none;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                pointer-events: none;
+                width: 75px;
+            }
+        
+    }
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .topLogo {
+            width: 100px;
+            height: 100px;
+            margin-left: 50px;
+            margin-top: 15px;
+        }
+
+        div {
+            display: flex;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 16px 32px;
+                gap: 10px;
+                width: 250px;
+                height: 60px;
+                border-radius: 10000px;
+                font-family: 'Goia', sans-serif;
+                font-style: italic;
+                font-weight: 600;
+                font-style: italic;
+                font-size: 18px;
+                line-height: 26px;
+                text-transform: uppercase;
+                color: #FFF6F1;
+                cursor: pointer;
+                margin-right: 20px;
+                text-decoration: none;
+
+                p {
+                    font-size: 30px;
+                }
+            }
+
+            .loginButton {
+                border: 2px solid #FFF6F1;
+                background: none;
+            }
+
+            .registerButton {
+                border: none;
+                background: #F1203C;
+            }
+        }
+    }
+
+    .headerNav {
+        display: flex;
+        justify-content: space-around;
+        align-items: left;
+        flex-direction: column;
+        padding: 20px 0;
+        font-family: 'GoiaDisplay', sans-serif;;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        text-transform: uppercase;
+
+        position: absolute;
+        text-align: left;
+        top: 300px;
+        left: 50px;
+
+
+        a:first-child {
+            color: #FFF6F1;
+        }
+
+        a {
+            color: #ffffff6e;
+            text-decoration: none;
+        }
+    }
+
+    .headerContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: 60vh;
+        padding: 0 20px;
+
+        div {
+            div {
+                h1 {
+                    color: white;
+                    width: 1200px;
+                    margin: 0 auto;
+                    font-family: 'GoiaDisplay', sans-serif;
+                    font-size: 600%;
+                    font-style: italic;
+                    line-height: 80px;
+                    text-transform: uppercase;
+                    color: #FFF6F1;
+                    position: relative;
+
+                    p {
+                        margin: 25px 0;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+
+                    p:nth-child(1) {
+                        text-align: left;
+                    }
+
+                    p:nth-child(2) {
+                        text-align: center;
+                    }
+
+                    p:nth-child(3) {
+                        text-align: right;
+                        margin-bottom: 100px;
+                    }
+                }
+
+            }
+
+            .playButton {
+
+                box-sizing: border-box;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 16px 35px;
+                gap: 10px;
+                margin: 0 auto;
+                font-size: 18px;
+                font-style: italic;
+                color: #FFF6F1;
+                font-family: 'GoiaDisplay', sans-serif;
+                font-weight: 700;
+                font-size: 100%;
+                text-transform: uppercase;
+
+                background: linear-gradient(44.04deg, #8E43AD 3.69%, #AA387D 23.45%, #D63251 48.76%, #F7352D 74.65%, #FA9B4F 94.55%);
+                border: 2px solid #FFF6F1;
+                border-radius: 10000px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+
+            }
+        }
+    }
+
+}

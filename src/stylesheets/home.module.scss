@@ -6,7 +6,7 @@
   padding: 0 0px;
   overflow-x: hidden;
 
-  a{
+  a {
     text-decoration: none;
   }
 
@@ -15,12 +15,12 @@
     text-transform: uppercase;
   }
 
-  .header-homepage {
+  .headerHomepage {
     position: relative;
     width: 100%;
     height: 75vh;
 
-    .header-homepage-text {
+    .headerHomepage-text {
       height: 100%;
       position: relative;
       display: inline-flex;
@@ -98,13 +98,13 @@
     width: 100%;
   }
 
-  .desc-jbh-homepage {
+  .descJbhHomepage {
     text-align: center;
     font-size: 28px;
   }
 }
 
-.start-button {
+.startButton {
   display: inline-flex !important;
   align-items: center !important;
   gap: 5px !important;
@@ -117,7 +117,7 @@
     padding: 20px 0;
   }
 
-  .btn-feedback {
+  .btnFeedback {
     @include button(#F1203C);
   }
 }
@@ -126,23 +126,24 @@
   background: #FFF6F1;
   color: #1D1D1D;
   position: relative;
-  padding-top : 5%;
+  padding-top: 5%;
 
-  .vinylHeader{
+  .vinylHeader {
     position: absolute;
     z-index: 2;
     top: -8%;
     left: 70%;
-    img{
-        user-drag: none;
-        user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        pointer-events: none;
+
+    img {
+      user-drag: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      pointer-events: none;
     }
-}
+  }
 
   .redCircle {
     position: absolute;
@@ -155,49 +156,51 @@
       width: 100%;
       height: 100%;
     }
+
     .mid {
       background: blue;
       width: 100%;
       height: 100%;
     }
+
     .bot {
       background: red;
       width: 100%;
       height: 100%;
     }
   }
-  
 
-  #actualite {
+
+  .actualite {
     padding: 20px;
 
-    .newsletterBut
-    {
-display: flex;
-flex-direction: row;
-justify-self: flex-end;
-align-items: center;
-padding: 16px 32px;
-gap: 10px;
+    .newsletterBut {
+      display: flex;
+      flex-direction: row;
+      justify-self: flex-end;
+      align-items: center;
+      padding: 16px 32px;
+      gap: 10px;
 
-background: #F1203C;
-border-radius: 10000px;
-color: #FFF6F1;
+      background: #F1203C;
+      border-radius: 10000px;
+      color: #FFF6F1;
       font-family: 'Goia', sans-serif;
       text-transform: uppercase;
       font-style: italic;
-border: none;
-margin-bottom: 5%;
+      border: none;
+      margin-bottom: 5%;
 
     }
 
-    .newsletter{
+    .newsletter {
       font-size: 18px;
       text-align: right;
       font-family: 'Goia', sans-serif;
       margin-bottom: 2%;
     }
-    .newsletter:after{
+
+    .newsletter:after {
       content: "Inscris toi à notre newsletter !";
       font-weight: 700;
     }
@@ -238,7 +241,7 @@ margin-bottom: 5%;
         position: relative;
 
         .ribbon {
-          position: absolute;  
+          position: absolute;
           width: 101%;
           height: 100%;
           top: 40%;
@@ -339,7 +342,7 @@ margin-bottom: 5%;
         margin: 0 20px;
 
         .ribbon {
-          position: absolute;  
+          position: absolute;
           width: 101%;
           height: 100%;
           top: 10%;
@@ -363,6 +366,7 @@ margin-bottom: 5%;
             position: absolute;
             bottom: 100px;
             width: 95%;
+
             p {
               margin: -5px 0;
             }
@@ -564,7 +568,7 @@ margin-bottom: 5%;
     }
   }
 
-  #jeux {
+  .jeux {
 
     // position: relative;
     margin: 0 0 200px 0;
@@ -655,12 +659,13 @@ margin-bottom: 5%;
 
   }
 
-  #faq {
+  .faq {
     padding: 20px 500px 20px 20px;
 
     h2 {
 
-      font-family: 'GoiaDisplay', sans-serif;;
+      font-family: 'GoiaDisplay', sans-serif;
+      ;
       font-style: italic;
       font-weight: 700;
       font-size: 48px;
@@ -677,7 +682,8 @@ margin-bottom: 5%;
         align-items: center;
 
         .question {
-          font-family: 'GoiaDisplay', sans-serif;;
+          font-family: 'GoiaDisplay', sans-serif;
+          ;
           font-style: italic;
           font-weight: 700;
           font-size: 24px;
@@ -705,7 +711,7 @@ margin-bottom: 5%;
 
   }
 
-  #tarifs {
+  .tarifs {
     padding: 20px;
 
     h2 {
@@ -741,13 +747,14 @@ margin-bottom: 5%;
         height: 600px;
 
         .tarifTier {
-          font-family: 'GoiaDisplay', sans-serif;;
+          font-family: 'GoiaDisplay', sans-serif;
+          ;
           text-transform: uppercase;
           margin: 0;
           font-size: 32px;
           font-style: italic;
           font-weight: 700;
-          
+
           align-self: flex-start;
         }
 
@@ -763,7 +770,8 @@ margin-bottom: 5%;
           display: flex;
           justify-content: center;
           align-items: center;
-          font-family: 'GoiaDisplay', sans-serif;;
+          font-family: 'GoiaDisplay', sans-serif;
+          ;
           font-weight: 700;
           font-style: italic;
           font-size: 80px;

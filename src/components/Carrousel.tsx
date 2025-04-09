@@ -1,6 +1,8 @@
 "use client"
+
 import { useState } from "react";
-import "@/stylesheets/Carrousel.scss";
+import styles from "@/stylesheets/Carrousel.module.scss";
+import Image from "next/image";
 
 const Carousel = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,18 +20,18 @@ const Carousel = ({ images }: { images: string[] }) => {
   };
 
   return (
-    <div className="carousel-container">
-      <div className="carousel-header">
-        <div className="carousel-arrows">
-          <button onClick={prevSlide} className="arrow">&#10094;</button>
-          <button onClick={nextSlide} className="arrow">&#10095;</button>
+    <div className={styles.carouselContainer}>
+      <div className={styles.carouselHeader}>
+        <div className={styles.carouselArrows}>
+          <button onClick={prevSlide} className={styles.arrow}>&#10094;</button>
+          <button onClick={nextSlide} className={styles.arrow}>&#10095;</button>
         </div>
-        <div className="carousel-title">
+        <div className={styles.carouselTitle}>
           <h2>Dernières actualités ·</h2>
         </div>
       </div>
-      <div className="carousel-content">
-        <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slide" />
+      <div className={styles.carouselContent}>
+        <Image src={images[currentIndex]} width={275} height={150} alt="" className={styles.slide} />
       </div>
     </div>
   );

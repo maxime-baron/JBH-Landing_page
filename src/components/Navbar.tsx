@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "@/stylesheets/navbar.module.scss";
 
 export default async function Navbar() {
-    const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL || "https://justbeatit.com";
+    const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL || "https://justbeathit.com";
 
     return (
         <div className={styles.landingHead}>

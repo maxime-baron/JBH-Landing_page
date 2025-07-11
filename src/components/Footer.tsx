@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import '@/stylesheets/footer.scss';
+// import '@/stylesheets/footer.scss';
 import Image from "next/image";
 // import { createClient } from "@/lib/supabase/server";
 

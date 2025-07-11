@@ -1,9 +1,9 @@
-import "@/stylesheets/home.scss";
+import '@/stylesheets/base.scss';
 import Link from "next/link";
 import Image from "next/image";
-import Carousel from "@/components/Carrousel";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Header";
 import Footer from "@/components/Footer";
+
 
 export default function Page() {
   const carouselImages = [
@@ -14,14 +14,16 @@ export default function Page() {
   return (
     <div className="home">
       <Navbar />
-
+            <div className="heartborder">
+                <img src="/assets/img/heartbeat.svg" alt="" />
+            </div>
       <div className="content">
       <div className="vinylHeader">
                 <img src="/assets/img/TopVinyl.svg" alt="" />
             </div>
-        <div className="redCircle">        <div className="top"></div>
-        <div className="mid"></div>
-        <div className="bot"></div></div>
+        <div className="redCircle">        <div className="Circle top"></div>
+        <div className="Circle mid"></div>
+        <div className="Circle bot"></div></div>
         {/* Section 1 Component */}
         <section id="actualite">
           <div>
@@ -108,6 +110,15 @@ export default function Page() {
         {/* FAQ Section */}
         <section id="faq">
           <h2>F.A.Q</h2>
+          {/* <div className='stripes'>
+            <div className='stripe'></div>
+            <div className='stripe'></div>
+            <div className='stripe'></div>
+            <div className='stripe'></div>
+            <div className='stripe'></div>
+            <div className='stripe'></div>
+            <div className='stripe'></div>
+          </div> */}
           <div>
             <div>
               <p className="question">Comment puis-je m'inscrire ?</p>

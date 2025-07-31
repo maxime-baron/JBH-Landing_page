@@ -1,8 +1,12 @@
+'use client';
+
 import '@/stylesheets/base.scss';
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Header";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import { useState } from 'react';
 
 
 export default function Page() {
@@ -48,9 +52,11 @@ export default function Page() {
                 <p>sur l’abonnement Premium</p>
               </div>
               <Image src="/assets/img/actualite1.svg" alt="Offre de lancement" width={300} height={200} className="actualite1Img" />
-              <button>
-                <p>&#129122;</p>S'Abonner
-              </button>
+                <Link href="https://play.justbeathit.com/options/subscription" passHref>
+                <button>
+                  <p>&#129122;</p>S'Abonner
+                </button>
+                </Link>
             </div>
             <div className="actuCard2">
             <div className="ribbon">
@@ -66,9 +72,11 @@ export default function Page() {
                   <p>Karakaku est un jeu qui met à l'épreuve ta vitesse de frappe ! Tu dois retaper les paroles de chansons aussi vite qu'elles sont chantées !</p>
                 </span>
               </div>
-              <button>
-                <p>&#129122;</p> Jouer
-              </button>
+                <Link href="https://play.justbeathit.com/game/karakaku" passHref>
+                <button>
+                  <p>&#129122;</p> Jouer
+                </button>
+                </Link>
             </div>
             <div className="actuCard3">
               <div>
@@ -108,40 +116,7 @@ export default function Page() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq">
-          <h2>F.A.Q</h2>
-          {/* <div className='stripes'>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-          </div> */}
-          <div>
-            <div>
-              <p className="question">Comment puis-je m'inscrire ?</p>
-              <button className="faqBut">+</button>
-            </div>
-            <p className="reponse" style={{ display: 'none' }}>Vous pouvez vous inscrire en cliquant sur le bouton "S'inscrire" en haut de la page.</p>
-            <hr />
-
-            <div>
-              <p className="question">Quels sont les modes de jeu disponibles ?</p>
-              <button className="faqBut">+</button>
-            </div>
-            <p className="reponse" style={{ display: 'none' }}>Nous proposons plusieurs modes de jeu incluant des défis journaliers et des jeux de rapidité.</p>
-            <hr />
-
-            <div>
-              <p className="question">Puis-je ajouter ma propre musique ?</p>
-              <button className="faqBut">+</button>
-            </div>
-            <p className="reponse" style={{ display: 'none' }}>Oui, cette fonctionnalité est disponible avec l'abonnement Premium.</p>
-            <hr />
-          </div>
-        </section>
+        <FAQ />
 
         {/* Section 3 Component */}
         <section id="tarifs">
@@ -151,7 +126,7 @@ export default function Page() {
               <p className="tarifTier">gratuit</p>
               <p className="tarifDesc">Jouez aussi longtemps que vous le souhaitez.</p>
               <div className="price">
-                <p>0€</p>
+                <p>0</p>
                 <p>/mois</p>
               </div>
               <div className="advantages">
@@ -171,7 +146,7 @@ export default function Page() {
               <p className="tarifTier">premium</p>
               <p className="tarifDesc">Jouez aussi longtemps que vous le souhaitez.</p>
               <div className="price">
-                <p>10€</p>
+                <p>6</p>
                 <p>/mois</p>
               </div>
               <div className="advantages">

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from "next/image";
 // import { createClient } from "@/lib/supabase/server";
 
-export default async function Footer() {
+export default function Footer() {
     // const supabase = createClient();
 
     // const { data: { user } } = await supabase.auth.getUser();

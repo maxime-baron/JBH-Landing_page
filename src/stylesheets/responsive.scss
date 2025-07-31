@@ -59,6 +59,7 @@ $breakpoint-desktop: 1200px;
         flex-direction: column;
         margin-top: 10px;
         width: 100%;
+        display: none;
 
         span {
           width: 100%;
@@ -75,17 +76,17 @@ $breakpoint-desktop: 1200px;
     }
 
     .circleTop {
-      right: -125px;
+      display: none;
     }
 
     .circleBottom {
       left: -125px;
+      top: -20%;
     }
 
     .headerNav {
-      top: 200px;
-      left: 20px;
-      font-size: 16px;
+      display: none;
+
     }
 
     .sticks {
@@ -93,8 +94,18 @@ $breakpoint-desktop: 1200px;
     }
 
     .headerMusicBar {
-      left: 150px;
-      height: 60px;
+      display: none;
+    }
+
+    .musicBars {
+      rotate: -90deg;
+      top: 20%;
+      // right: 100px;
+      height: 50%;
+      width: 100px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
 
     .headerContent {
@@ -186,18 +197,22 @@ $breakpoint-desktop: 1200px;
 
     .container {
       flex-direction: column;
+      align-items: center;
 
       .footer-section {
         margin-right: 0;
         margin-bottom: 20px;
         text-align: center;
 
-        h2 {
-          font-size: 1.8em;
+        &:first-child {
+          display: none; // Hide the navigation section
         }
 
-        .footerNav {
-          align-items: center;
+        &:last-child {
+          // Keep contact section
+          h2 {
+            font-size: 1.8em;
+          }
         }
       }
     }
@@ -212,21 +227,31 @@ $breakpoint-desktop: 1200px;
     .footer-bottom {
       flex-direction: column;
       gap: 10px;
+      text-align: center;
     }
   }
 
   @include tablet {
     .leftSide {
-      width: 80%;
+      width: 70%;
       padding: 0 2rem;
     }
 
     .container {
-      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
 
       .footer-section {
-        flex: 0 0 45%;
-        margin-bottom: 20px;
+        &:first-child {
+          display: none; // Hide the navigation section
+        }
+
+        &:last-child {
+          // Keep contact section
+          flex: 0 0 auto;
+          margin-bottom: 20px;
+        }
       }
     }
 
@@ -234,6 +259,57 @@ $breakpoint-desktop: 1200px;
       .footerLogo {
         width: 200px;
         margin: 0 50px;
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+
+  @include laptop {
+    .leftSide {
+      width: 70%;
+    }
+
+    .container {
+      .footer-section {
+        &:first-child {
+          display: none; // Hide the navigation section
+        }
+
+        &:last-child {
+          // Keep contact section
+          flex: 0 0 auto;
+        }
+      }
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @include desktop {
+    .leftSide {
+      width: 70%;
+    }
+
+    .container {
+      .footer-section {
+        &:first-child {
+          display: none; // Hide the navigation section
+        }
+
+        &:last-child {
+          // Keep contact section
+          flex: 0 0 auto;
+        }
       }
     }
   }
@@ -337,31 +413,457 @@ $breakpoint-desktop: 1200px;
   .content {
     @include mobile {
       .vinylHeader {
-        top: -5%;
-        left: 50%;
+        // position: relative;
+        top: -2%;
+        left: 80%;
         transform: translateX(-50%);
-        width: 80%;
+        width: 40%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // margin: 20px 0;
+        z-index: 5;
         
         img {
           width: 100%;
+          max-width: 300px;
+          height: auto;
+          object-fit: contain;
         }
       }
       
       #actualite {
         padding: 10px;
         
-        .newsletterBut {
-          padding: 12px 24px;
-          width: 100%;
-          justify-content: center;
+        div:nth-child(1) h2 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+        }
+        
+        div {
+          div{
+          display: none;
+        }
+        }
+        
+        .containerCard {
+          flex-direction: column;
+          gap: 20px;
+          padding: 0 10px;
+          
+          .actuCard1,
+          .actuCard2,
+          .actuCard3 {
+            max-width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 20px 15px;
+            
+            button {
+              position: relative;
+              bottom: auto;
+              right: auto;
+              align-self: center;
+              font-size: 14px;
+              padding: 12px 20px;
+              min-width: 100px;
+              margin: 15px 0 0 0;
+            }
+          }
+          
+          .actuCard1 {
+            .actualite1Img {
+              position: relative;
+              width: 80%;
+              bottom: auto;
+              right: auto;
+              align-self: center;
+              margin: 10px 0;
+            }
+            
+            div p {
+              font-size: 16px !important;
+              text-align: center;
+            }
+            
+            div p:nth-child(2) {
+              font-size: 24px !important;
+            }
+            
+            div p:nth-child(3) {
+              font-size: 12px !important;
+            }
+          }
+          
+          .actuCard2 {
+            .actualite2Img {
+              position: relative;
+              width: 60%;
+              top: auto;
+              right: auto;
+              align-self: center;
+              margin: 10px 0;
+            }
+            
+            div span {
+              position: relative;
+              bottom: auto;
+              width: 100%;
+              text-align: center;
+              
+              p:nth-child(1) {
+                font-size: 16px !important;
+              }
+              
+              p:nth-child(2) {
+                font-size: 24px !important;
+              }
+              
+              p:nth-child(3) {
+                font-size: 12px !important;
+              }
+            }
+          }
+          
+          .actuCard3 {
+            display: none;
+          }
+        }
+      }
+      
+      #tarifs {
+        span {
+          flex-direction: column;
+          gap: 20px;
+          
+          .tarifCard {
+            width: 100%;
+            max-width: 350px;
+            margin: 10px 0;
+          }
+          
+          .tarifCard:nth-child(1) {
+            .price {
+              p:nth-child(1) {
+                font-size: 60px !important;
+                position: relative;
+              }
+            }
+          }
+          
+          .tarifCard:nth-child(2) {
+            .price {
+              p:nth-child(1) {
+                font-size: 60px !important;
+                position: relative;
+              
+              }
+            }
+          }
+        }
+        
+        h2 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+          text-align: left !important;
+        }
+      }
+      
+      #faq {
+        padding: 20px;
+        
+        h2 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+        }
+        
+        .stripes {
+          display: none;
+        }
+        
+        div > div > div:first-child {
+          .question {
+            font-size: 17px !important;
+            line-height: 20px !important;
+          }
+          
+          .faqBut {
+            width: 35px !important;
+            height: 35px !important;
+            font-size: 16px !important;
+          }
+        }
+      }
+      
+      #jeux {
+        margin: 50px 0;
+        
+        h2 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+          margin-bottom: 30px !important;
+          padding: 0 20px;
+        }
+        
+        .vinyl {
+          display: none;
+        }
+        
+        div {
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+          
+          .karakakuDesc {
+            width: 100% !important;
+            order: 2;
+            
+            h3 {
+              font-size: 28px !important;
+              line-height: 36px !important;
+              margin-bottom: 15px !important;
+            }
+            
+            p {
+              font-size: 12px !important;
+              line-height: 22px !important;
+            }
+          }
+          
+          .video {
+            width: 90% !important;
+            order: 1;
+            margin-bottom: 20px;
+          }
+          
+          .smallVinyl {
+            display: none;
+          }
         }
       }
     }
     
     @include tablet {
       .vinylHeader {
-        top: -6%;
-        left: 60%;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        z-index: 5;
+        
+        img {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+      
+      #actualite {
+        div:nth-child(1) h2 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+        }
+        
+        .containerCard {
+          flex-direction: column;
+          gap: 15px;
+          padding: 0 5%;
+          
+          .actuCard1,
+          .actuCard2,
+          .actuCard3 {
+            max-width: 100%;
+            margin: 0;
+            height: auto;
+            padding: 25px 20px;
+            
+            button {
+              position: relative;
+              bottom: auto;
+              right: auto;
+              // align-self: center;
+              font-size: 16px;
+              padding: 14px 24px;
+              min-width: 120px;
+              margin: 20px 0 0 0;
+            }
+          }
+          
+          .actuCard1 {
+            .actualite1Img {
+              position: relative;
+              width: 70%;
+              bottom: auto;
+              right: auto;
+              align-self: center;
+              margin: 15px 0;
+            }
+            
+            div p {
+              font-size: 18px !important;
+              text-align: center;
+            }
+            
+            div p:nth-child(2) {
+              font-size: 28px !important;
+            }
+            
+            div p:nth-child(3) {
+              font-size: 14px !important;
+            }
+          }
+          
+          .actuCard2 {
+            .actualite2Img {
+              position: relative;
+              width: 50%;
+              top: auto;
+              right: auto;
+              align-self: center;
+              margin: 15px 0;
+            }
+            
+            div span {
+              position: relative;
+              bottom: auto;
+              width: 100%;
+              text-align: center;
+              
+              p:nth-child(1) {
+                font-size: 18px !important;
+              }
+              
+              p:nth-child(2) {
+                font-size: 28px !important;
+              }
+              
+              p:nth-child(3) {
+                font-size: 14px !important;
+              }
+            }
+          }
+        }
+      }
+      
+      #tarifs {
+        h2 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+          text-align: left !important;
+        }
+        
+        span {
+          flex-direction: column;
+          gap: 15px;
+          
+          .tarifCard {
+            width: 100%;
+            max-width: 400px;
+            margin: 8px 0;
+            
+            .price {
+              p:nth-child(2) {
+                font-size: 12px !important;
+              }
+            }
+          }
+        }
+      }
+      
+      #faq {
+        padding: 20px;
+        
+        h2 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+        }
+        
+        .stripes {
+          display: none;
+        }
+      }
+      
+      #jeux {
+        margin: 70px 0;
+        
+        h2 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+          margin-bottom: 40px !important;
+          // text-align: center;
+        }
+        
+        .vinyl {
+          left: -300px;
+          width: 800px;
+          height: 800px;
+        }
+        
+        div {
+          flex-direction: column;
+          align-items: center;
+          
+          .karakakuDesc {
+            width: 80% !important;
+            order: 2;
+            // text-align: center;
+            
+            h3 {
+              font-size: 36px !important;
+              line-height: 44px !important;
+            }
+            
+            p {
+              font-size: 12px !important;
+              line-height: 24px !important;
+            }
+          }
+          
+          .video {
+            width: 80% !important;
+            order: 1;
+            margin-bottom: 30px;
+          }
+          
+          .smallVinyl {
+            position: relative;
+            top: auto;
+            right: auto;
+            order: 3;
+            margin-top: 20px;
+            
+            img {
+              width: 100px;
+            }
+          }
+        }
+      }
+    }
+    
+    @include laptop {
+      .vinylHeader {
+        position: absolute;
+        top: -3%;
+        left: 55%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: auto;
+        z-index: 5;
+        
+        img {
+          width: 100%;
+          max-width: 500px;
+          height: auto;
+          object-fit: contain;
+        }
       }
     }
   }

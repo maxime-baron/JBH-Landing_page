@@ -10,25 +10,22 @@ export default function Page() {
   return (
     <div className="home">
       <Navbar />
-            <div className="heartborder">
-                <img src="/assets/img/heartbeat.svg" alt="" />
-            </div>
-      <div className="content">
-      <div className="vinylHeader">
-                <img src="/assets/img/TopVinyl.svg" alt="" />
-            </div>
-        <div className="redCircle">        <div className="Circle top"></div>
-        <div className="Circle mid"></div>
-        <div className="Circle bot"></div></div>
+        <div className="heartborder">
+            <img src="/assets/img/heartbeat.svg" alt="" />
+        </div>
+        <div className="content">
+        <div className="vinylHeader">
+            <img src="/assets/img/TopVinyl.svg" alt="" />
+        </div>
         {/* Section 1 Component */}
         <section id="actualite">
           <div>
             <h2>Actualités</h2>
             <div>
               <p className="newsletter">Envie d&apos;être au courant de toutes les actualités ? <br /></p>
-              <button className="newsletterBut">
+              <Link href={"https://play.justbeathit.com/options/notifications"} className="newsletterBut">
                 <p>&#129122;</p> S&apos;inscrire à la Newsletter
-              </button>
+              </Link>
             </div>
           </div>
           <div className="containerCard">
@@ -74,15 +71,19 @@ export default function Page() {
               <div>
                 <Image src="/assets/img/team.svg" alt="Équipe JBH" width={300} height={200} />
                 <p>Découvre l&apos;équipe JBH</p>
+                <Link href="https://play.justbeathit.com" passHref>
                 <button>
                   <p>&#129122;</p> En savoir plus
                 </button>
+                </Link>
               </div>
               <div>
                 <p>découvrez la roadmap</p>
+                <Link href="https://play.justbeathit.com" passHref>
                 <button>
                   <p>&#129122;</p> En savoir plus
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -130,9 +131,11 @@ export default function Page() {
                   <li>Offre gratuite</li>
                 </ul>
               </div>
+              <Link href={"https://play.justbeathit.com/options/subscription"}>
               <button>
                 <p>&#129122;</p> S&apos;inscrire
               </button>
+              </Link>
             </div>
             <div className="tarifCard">
               <p className="tarifTier">premium</p>
@@ -150,10 +153,12 @@ export default function Page() {
                   <li>Ajout de fichiers audio personnalisés</li>
                 </ul>
               </div>
+              <Link href={"https://play.justbeathit.com/options/subscription"}>
               <button>
                 <p>&#129122;</p>
                 <p>S&apos;abonner</p>
               </button>
+              </Link>
             </div>
           </span>
         </section>

@@ -1,19 +1,11 @@
-'use client';
-
 import '@/stylesheets/base.scss';
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
-import { useState } from 'react';
-
 
 export default function Page() {
-  const carouselImages = [
-    "/assets/img/Boat.jpg",
-    "/assets/img/Carrousel1.png",
-  ];
 
   return (
     <div className="home">
@@ -33,9 +25,9 @@ export default function Page() {
           <div>
             <h2>Actualités</h2>
             <div>
-              <p className="newsletter">Envie d’être au courant de toutes les actualités ? <br /></p>
+              <p className="newsletter">Envie d&apos;être au courant de toutes les actualités ? <br /></p>
               <button className="newsletterBut">
-                <p>&#129122;</p> S'inscrire à la Newsletter
+                <p>&#129122;</p> S&apos;inscrire à la Newsletter
               </button>
             </div>
           </div>
@@ -49,12 +41,12 @@ export default function Page() {
               <div>
                 <p>offre de lancement</p>
                 <p>50% de réduction</p>
-                <p>sur l’abonnement Premium</p>
+                <p>sur l&apos;abonnement Premium</p>
               </div>
               <Image src="/assets/img/actualite1.svg" alt="Offre de lancement" width={300} height={200} className="actualite1Img" />
                 <Link href="https://play.justbeathit.com/options/subscription" passHref>
                 <button>
-                  <p>&#129122;</p>S'Abonner
+                  <p>&#129122;</p>S&apos;Abonner
                 </button>
                 </Link>
             </div>
@@ -69,7 +61,7 @@ export default function Page() {
                 <span>
                   <p>nouveau jeu</p>
                   <p>karakaku</p>
-                  <p>Karakaku est un jeu qui met à l'épreuve ta vitesse de frappe ! Tu dois retaper les paroles de chansons aussi vite qu'elles sont chantées !</p>
+                  <p>Karakaku est un jeu qui met à l&apos;épreuve ta vitesse de frappe ! Tu dois retaper les paroles de chansons aussi vite qu&apos;elles sont chantées !</p>
                 </span>
               </div>
                 <Link href="https://play.justbeathit.com/game/karakaku" passHref>
@@ -81,7 +73,7 @@ export default function Page() {
             <div className="actuCard3">
               <div>
                 <Image src="/assets/img/team.svg" alt="Équipe JBH" width={300} height={200} />
-                <p>Découvre l’équipe JBH</p>
+                <p>Découvre l&apos;équipe JBH</p>
                 <button>
                   <p>&#129122;</p> En savoir plus
                 </button>
@@ -104,7 +96,7 @@ export default function Page() {
             <div>
               <div className="karakakuDesc">
                 <h3>karakaku</h3>
-                <p>Tu dois retaper les paroles de chansons aussi vite qu'elles sont chantées !</p>
+                <p>Tu dois retaper les paroles de chansons aussi vite qu&apos;elles sont chantées !</p>
               </div>
               <Image src="/assets/img/Video.svg" alt="Vidéo Karakaku" className="video" width={300} height={200} />
               <div className="smallVinyl">
@@ -139,7 +131,7 @@ export default function Page() {
                 </ul>
               </div>
               <button>
-                <p>&#129122;</p> S'inscrire
+                <p>&#129122;</p> S&apos;inscrire
               </button>
             </div>
             <div className="tarifCard">
@@ -160,7 +152,7 @@ export default function Page() {
               </div>
               <button>
                 <p>&#129122;</p>
-                <p>S'abonner</p>
+                <p>S&apos;abonner</p>
               </button>
             </div>
           </span>

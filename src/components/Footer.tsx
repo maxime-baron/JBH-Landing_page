@@ -1,17 +1,7 @@
 import Link from 'next/link';
-// import '@/stylesheets/footer.scss';
 import Image from "next/image";
-// import { createClient } from "@/lib/supabase/server";
 
 export default function Footer() {
-    // const supabase = createClient();
-
-    // const { data: { user } } = await supabase.auth.getUser();
-    // const { data } = await supabase
-    //     .from('profiles')
-    //     .select('*')
-    //     .eq('id', user?.id as string)
-    //     .single();
 
     return (
         <footer className="footer">

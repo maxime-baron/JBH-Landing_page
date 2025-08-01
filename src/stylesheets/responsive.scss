@@ -19,7 +19,7 @@ $breakpoint-desktop: 1200px;
 
 // Media query mixins
 @mixin mobile {
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $breakpoint-laptop) {
     @content;
   }
 }
@@ -45,6 +45,18 @@ $breakpoint-desktop: 1200px;
 // Header responsive styles
 .landingHead {
   @include mobile {
+    .burgerMenu {
+      display: flex !important;
+    }
+    
+    .mobileNavOverlay {
+      display: block !important;
+    }
+    
+    .mobileNav {
+      display: block !important;
+    }
+    
     .topbar {
       flex-direction: column;
       padding: 10px;
@@ -99,13 +111,10 @@ $breakpoint-desktop: 1200px;
 
     .musicBars {
       rotate: -90deg;
-      top: 20%;
-      // right: 100px;
+      top: 10%;
+      left: 75%;
       height: 50%;
       width: 100px;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
     }
 
     .headerContent {
@@ -482,9 +491,12 @@ $breakpoint-desktop: 1200px;
               margin: 10px 0;
             }
             
-            div p {
-              font-size: 16px !important;
-              text-align: center;
+            button {
+              align-self: flex-end;
+            }
+            
+            div p:nth-child(1) {
+              font-size: 20px !important;
             }
             
             div p:nth-child(2) {
@@ -510,7 +522,11 @@ $breakpoint-desktop: 1200px;
               position: relative;
               bottom: auto;
               width: 100%;
-              text-align: center;
+              // text-align: center;
+              
+              p {
+                margin: 10px 0!important;
+              }
               
               p:nth-child(1) {
                 font-size: 16px !important;
@@ -639,210 +655,6 @@ $breakpoint-desktop: 1200px;
           
           .smallVinyl {
             display: none;
-          }
-        }
-      }
-    }
-    
-    @include tablet {
-      .vinylHeader {
-        position: relative;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 70%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px 0;
-        z-index: 5;
-        
-        img {
-          width: 100%;
-          max-width: 400px;
-          height: auto;
-          object-fit: contain;
-        }
-      }
-      
-      #actualite {
-        div:nth-child(1) h2 {
-          font-size: 40px !important;
-          line-height: 48px !important;
-        }
-        
-        .containerCard {
-          flex-direction: column;
-          gap: 15px;
-          padding: 0 5%;
-          
-          .actuCard1,
-          .actuCard2,
-          .actuCard3 {
-            max-width: 100%;
-            margin: 0;
-            height: auto;
-            padding: 25px 20px;
-            
-            button {
-              position: relative;
-              bottom: auto;
-              right: auto;
-              // align-self: center;
-              font-size: 16px;
-              padding: 14px 24px;
-              min-width: 120px;
-              margin: 20px 0 0 0;
-            }
-          }
-          
-          .actuCard1 {
-            .actualite1Img {
-              position: relative;
-              width: 70%;
-              bottom: auto;
-              right: auto;
-              align-self: center;
-              margin: 15px 0;
-            }
-            
-            div p {
-              font-size: 18px !important;
-              text-align: center;
-            }
-            
-            div p:nth-child(2) {
-              font-size: 28px !important;
-            }
-            
-            div p:nth-child(3) {
-              font-size: 14px !important;
-            }
-          }
-          
-          .actuCard2 {
-            .actualite2Img {
-              position: relative;
-              width: 50%;
-              top: auto;
-              right: auto;
-              align-self: center;
-              margin: 15px 0;
-            }
-            
-            div span {
-              position: relative;
-              bottom: auto;
-              width: 100%;
-              text-align: center;
-              
-              p:nth-child(1) {
-                font-size: 18px !important;
-              }
-              
-              p:nth-child(2) {
-                font-size: 28px !important;
-              }
-              
-              p:nth-child(3) {
-                font-size: 14px !important;
-              }
-            }
-          }
-        }
-      }
-      
-      #tarifs {
-        h2 {
-          font-size: 40px !important;
-          line-height: 48px !important;
-          text-align: left !important;
-        }
-        
-        span {
-          flex-direction: column;
-          gap: 15px;
-          
-          .tarifCard {
-            width: 100%;
-            max-width: 400px;
-            margin: 8px 0;
-            
-            .price {
-              p:nth-child(2) {
-                font-size: 12px !important;
-              }
-            }
-          }
-        }
-      }
-      
-      #faq {
-        padding: 20px;
-        
-        h2 {
-          font-size: 40px !important;
-          line-height: 48px !important;
-        }
-        
-        .stripes {
-          display: none;
-        }
-      }
-      
-      #jeux {
-        margin: 70px 0;
-        
-        h2 {
-          font-size: 40px !important;
-          line-height: 48px !important;
-          margin-bottom: 40px !important;
-          // text-align: center;
-        }
-        
-        .vinyl {
-          left: -300px;
-          width: 800px;
-          height: 800px;
-        }
-        
-        div {
-          flex-direction: column;
-          align-items: center;
-          
-          .karakakuDesc {
-            width: 80% !important;
-            order: 2;
-            // text-align: center;
-            
-            h3 {
-              font-size: 36px !important;
-              line-height: 44px !important;
-            }
-            
-            p {
-              font-size: 12px !important;
-              line-height: 24px !important;
-            }
-          }
-          
-          .video {
-            width: 80% !important;
-            order: 1;
-            margin-bottom: 30px;
-          }
-          
-          .smallVinyl {
-            position: relative;
-            top: auto;
-            right: auto;
-            order: 3;
-            margin-top: 20px;
-            
-            img {
-              width: 100px;
-            }
           }
         }
       }

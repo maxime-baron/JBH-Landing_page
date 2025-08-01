@@ -4,6 +4,173 @@
     position: relative;
     // overflow: hidden;
   
+    .burgerMenu {
+        display: none;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #1D1D1D;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            transform-origin: center;
+        }
+        
+        &:hover span {
+            background: #2A2A2A;
+        }
+        
+        &.active span {
+            background: #FFF6F1;
+            
+            &:hover {
+                background: #e6d5c8;
+            }
+            
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+            
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+        }
+    }
+    
+    .mobileNavOverlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(29, 29, 29, 0.7);
+        z-index: 998;
+    }
+    
+    .mobileNav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #1D1D1D;
+        border-right: 2px solid #2A2A2A;
+        z-index: 999;
+        padding: 80px 25px 25px;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        
+        &.open {
+            left: 0;
+        }
+        
+        a {
+            display: block;
+            color: #FFF6F1;
+            text-decoration: none;
+            padding: 18px 0;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            border-bottom: 1px solid #2A2A2A;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                color: #e6d5c8;
+                padding-left: 10px;
+            }
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        
+        .mobileAuthButtons {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #2A2A2A;
+            
+            a {
+                border-bottom: none;
+                padding: 10px 0;
+                
+                &:hover {
+                    padding-left: 0;
+                }
+            }
+            
+            .mobileLoginButton,
+            .mobileRegisterButton {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 20px;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+                margin: 8px 0;
+                
+                svg {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            
+            .mobileLoginButton {
+                background: transparent;
+                border: 2px solid #FFF6F1;
+                color: #FFF6F1;
+                
+                &:hover {
+                    background: #FFF6F1;
+                    color: #1D1D1D;
+                    
+                    svg path {
+                        fill: #1D1D1D;
+                    }
+                }
+            }
+            
+            .mobileRegisterButton {
+                background: #FFF6F1;
+                color: #1D1D1D;
+                border: 2px solid #FFF6F1;
+                
+                svg path {
+                    fill: #1D1D1D;
+                }
+                
+                &:hover {
+                    background: transparent;
+                    color: #FFF6F1;
+                    
+                    svg path {
+                        fill: #FFF6F1;
+                    }
+                }
+            }
+        }
+    }
+  
 
     .whiteCircle {
         position: absolute;
@@ -88,7 +255,6 @@
 
 
         img {
-            user-drag: none;
             user-select: none;
             -webkit-user-drag: none;
             -webkit-user-select: none;

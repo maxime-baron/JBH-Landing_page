@@ -3,36 +3,29 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import FAQ from "@/components/FAQ";
 
 export default function Page() {
-  const carouselImages = [
-    "/assets/img/Boat.jpg",
-    "/assets/img/Carrousel1.png",
-  ];
 
   return (
     <div className="home">
       <Navbar />
-            <div className="heartborder">
-                <img src="/assets/img/heartbeat.svg" alt="" />
-            </div>
-      <div className="content">
-      <div className="vinylHeader">
-                <img src="/assets/img/TopVinyl.svg" alt="" />
-            </div>
-        <div className="redCircle">        <div className="Circle top"></div>
-        <div className="Circle mid"></div>
-        <div className="Circle bot"></div></div>
+        <div className="heartborder">
+            <img src="/assets/img/heartbeat.svg" alt="" />
+        </div>
+        <div className="content">
+        <div className="vinylHeader">
+            <img src="/assets/img/TopVinyl.svg" alt="" />
+        </div>
         {/* Section 1 Component */}
         <section id="actualite">
           <div>
             <h2>Actualités</h2>
             <div>
-              <p className="newsletter">Envie d’être au courant de toutes les actualités ? <br /></p>
-              <button className="newsletterBut">
-                <p>&#129122;</p> S'inscrire à la Newsletter
-              </button>
+              <p className="newsletter">Envie d&apos;être au courant de toutes les actualités ? <br /></p>
+              <Link href={"https://play.justbeathit.com/options/notifications"} className="newsletterBut">
+                <p>&#129122;</p> S&apos;inscrire à la Newsletter
+              </Link>
             </div>
           </div>
           <div className="containerCard">
@@ -45,12 +38,14 @@ export default function Page() {
               <div>
                 <p>offre de lancement</p>
                 <p>50% de réduction</p>
-                <p>sur l’abonnement Premium</p>
+                <p>sur l&apos;abonnement Premium</p>
               </div>
               <Image src="/assets/img/actualite1.svg" alt="Offre de lancement" width={300} height={200} className="actualite1Img" />
-              <button>
-                <p>&#129122;</p>S'Abonner
-              </button>
+                <Link href="https://play.justbeathit.com/options/subscription" passHref>
+                <button>
+                  <p>&#129122;</p>S&apos;Abonner
+                </button>
+                </Link>
             </div>
             <div className="actuCard2">
             <div className="ribbon">
@@ -63,26 +58,32 @@ export default function Page() {
                 <span>
                   <p>nouveau jeu</p>
                   <p>karakaku</p>
-                  <p>Karakaku est un jeu qui met à l'épreuve ta vitesse de frappe ! Tu dois retaper les paroles de chansons aussi vite qu'elles sont chantées !</p>
+                  <p>Karakaku est un jeu qui met à l&apos;épreuve ta vitesse de frappe ! Tu dois retaper les paroles de chansons aussi vite qu&apos;elles sont chantées !</p>
                 </span>
               </div>
-              <button>
-                <p>&#129122;</p> Jouer
-              </button>
+                <Link href="https://play.justbeathit.com/game/karakaku" passHref>
+                <button>
+                  <p>&#129122;</p> Jouer
+                </button>
+                </Link>
             </div>
             <div className="actuCard3">
               <div>
                 <Image src="/assets/img/team.svg" alt="Équipe JBH" width={300} height={200} />
-                <p>Découvre l’équipe JBH</p>
+                <p>Découvre l&apos;équipe JBH</p>
+                <Link href="https://play.justbeathit.com" passHref>
                 <button>
                   <p>&#129122;</p> En savoir plus
                 </button>
+                </Link>
               </div>
               <div>
                 <p>découvrez la roadmap</p>
+                <Link href="https://play.justbeathit.com" passHref>
                 <button>
                   <p>&#129122;</p> En savoir plus
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -96,7 +97,7 @@ export default function Page() {
             <div>
               <div className="karakakuDesc">
                 <h3>karakaku</h3>
-                <p>Tu dois retaper les paroles de chansons aussi vite qu'elles sont chantées !</p>
+                <p>Tu dois retaper les paroles de chansons aussi vite qu&apos;elles sont chantées !</p>
               </div>
               <Image src="/assets/img/Video.svg" alt="Vidéo Karakaku" className="video" width={300} height={200} />
               <div className="smallVinyl">
@@ -108,40 +109,7 @@ export default function Page() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq">
-          <h2>F.A.Q</h2>
-          {/* <div className='stripes'>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-            <div className='stripe'></div>
-          </div> */}
-          <div>
-            <div>
-              <p className="question">Comment puis-je m'inscrire ?</p>
-              <button className="faqBut">+</button>
-            </div>
-            <p className="reponse" style={{ display: 'none' }}>Vous pouvez vous inscrire en cliquant sur le bouton "S'inscrire" en haut de la page.</p>
-            <hr />
-
-            <div>
-              <p className="question">Quels sont les modes de jeu disponibles ?</p>
-              <button className="faqBut">+</button>
-            </div>
-            <p className="reponse" style={{ display: 'none' }}>Nous proposons plusieurs modes de jeu incluant des défis journaliers et des jeux de rapidité.</p>
-            <hr />
-
-            <div>
-              <p className="question">Puis-je ajouter ma propre musique ?</p>
-              <button className="faqBut">+</button>
-            </div>
-            <p className="reponse" style={{ display: 'none' }}>Oui, cette fonctionnalité est disponible avec l'abonnement Premium.</p>
-            <hr />
-          </div>
-        </section>
+        <FAQ />
 
         {/* Section 3 Component */}
         <section id="tarifs">
@@ -151,7 +119,7 @@ export default function Page() {
               <p className="tarifTier">gratuit</p>
               <p className="tarifDesc">Jouez aussi longtemps que vous le souhaitez.</p>
               <div className="price">
-                <p>0€</p>
+                <p>0</p>
                 <p>/mois</p>
               </div>
               <div className="advantages">
@@ -163,15 +131,17 @@ export default function Page() {
                   <li>Offre gratuite</li>
                 </ul>
               </div>
+              <Link href={"https://play.justbeathit.com/options/subscription"}>
               <button>
-                <p>&#129122;</p> S'inscrire
+                <p>&#129122;</p> S&apos;inscrire
               </button>
+              </Link>
             </div>
             <div className="tarifCard">
               <p className="tarifTier">premium</p>
               <p className="tarifDesc">Jouez aussi longtemps que vous le souhaitez.</p>
               <div className="price">
-                <p>10€</p>
+                <p>6</p>
                 <p>/mois</p>
               </div>
               <div className="advantages">
@@ -183,10 +153,12 @@ export default function Page() {
                   <li>Ajout de fichiers audio personnalisés</li>
                 </ul>
               </div>
+              <Link href={"https://play.justbeathit.com/options/subscription"}>
               <button>
                 <p>&#129122;</p>
-                <p>S'abonner</p>
+                <p>S&apos;abonner</p>
               </button>
+              </Link>
             </div>
           </span>
         </section>

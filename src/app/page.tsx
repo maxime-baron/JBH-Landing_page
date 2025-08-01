@@ -10,12 +10,12 @@ export default function Page() {
   return (
     <div className="home">
       <Navbar />
-        <div className="heartborder">
-            <img src="/assets/img/heartbeat.svg" alt="" />
-        </div>
-        <div className="content">
+      <div className="heartborder">
+        <img src="/assets/img/heartbeat.svg" alt="" />
+      </div>
+      <div className="content">
         <div className="vinylHeader">
-            <img src="/assets/img/TopVinyl.svg" alt="" />
+          <img src="/assets/img/TopVinyl.svg" alt="" />
         </div>
         {/* Section 1 Component */}
         <section id="actualite">
@@ -24,16 +24,18 @@ export default function Page() {
             <div>
               <p className="newsletter">Envie d&apos;être au courant de toutes les actualités ? <br /></p>
               <Link href={"https://play.justbeathit.com/options/notifications"} className="newsletterBut">
-                <p>&#129122;</p> S&apos;inscrire à la Newsletter
+                <p>                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M7.96722 0.925476C7.64992 1.24278 7.64992 1.75722 7.96722 2.07452L13.0802 7.1875H1.50008C1.05135 7.1875 0.687581 7.55127 0.687581 8C0.687581 8.44873 1.05135 8.8125 1.50008 8.8125H13.0802L7.96722 13.9255C7.64992 14.2428 7.64992 14.7572 7.96722 15.0745C8.28452 15.3918 8.79897 15.3918 9.11627 15.0745L15.6163 8.57452C15.9336 8.25722 15.9336 7.74278 15.6163 7.42548L9.11627 0.925476C8.79897 0.608175 8.28452 0.608175 7.96722 0.925476Z" fill="#FFF6F1" />
+                </svg></p> S&apos;inscrire à la Newsletter
               </Link>
             </div>
           </div>
           <div className="containerCard">
             <div className="actuCard1">
               <div className="ribbon">
-                <img src="/assets/img/bridesmaid.svg"/>
-                <img src="/assets/img/bridesmaid.svg"/>
-                <img src="/assets/img/bridesmaid.svg"/>
+                <img src="/assets/img/bridesmaid.svg" />
+                <img src="/assets/img/bridesmaid.svg" />
+                <img src="/assets/img/bridesmaid.svg" />
               </div>
               <div>
                 <p>offre de lancement</p>
@@ -41,17 +43,21 @@ export default function Page() {
                 <p>sur l&apos;abonnement Premium</p>
               </div>
               <Image src="/assets/img/actualite1.svg" alt="Offre de lancement" width={300} height={200} className="actualite1Img" />
-                <Link href="https://play.justbeathit.com/options/subscription" passHref>
+              <Link href="https://play.justbeathit.com/options/subscription" passHref>
                 <button>
-                  <p>&#129122;</p>S&apos;Abonner
+                  <p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M7.96722 0.925476C7.64992 1.24278 7.64992 1.75722 7.96722 2.07452L13.0802 7.1875H1.50008C1.05135 7.1875 0.687581 7.55127 0.687581 8C0.687581 8.44873 1.05135 8.8125 1.50008 8.8125H13.0802L7.96722 13.9255C7.64992 14.2428 7.64992 14.7572 7.96722 15.0745C8.28452 15.3918 8.79897 15.3918 9.11627 15.0745L15.6163 8.57452C15.9336 8.25722 15.9336 7.74278 15.6163 7.42548L9.11627 0.925476C8.79897 0.608175 8.28452 0.608175 7.96722 0.925476Z" fill="#1D1D1D" />
+                    </svg>
+                  </p>S&apos;Abonner
                 </button>
-                </Link>
+              </Link>
             </div>
             <div className="actuCard2">
-            <div className="ribbon">
-                <img src="/assets/img/bridesmaid.svg"/>
-                <img src="/assets/img/bridesmaid.svg"/>
-                <img src="/assets/img/bridesmaid.svg"/>
+              <div className="ribbon">
+                <img src="/assets/img/bridesmaid.svg" />
+                <img src="/assets/img/bridesmaid.svg" />
+                <img src="/assets/img/bridesmaid.svg" />
               </div>
               <div>
                 <Image src="/assets/img/actualite2.svg" alt="Nouveau jeu Karakaku" width={300} height={200} className="actualite2Img" />
@@ -61,28 +67,34 @@ export default function Page() {
                   <p>Karakaku est un jeu qui met à l&apos;épreuve ta vitesse de frappe ! Tu dois retaper les paroles de chansons aussi vite qu&apos;elles sont chantées !</p>
                 </span>
               </div>
-                <Link href="https://play.justbeathit.com/game/karakaku" passHref>
+              <Link href="https://play.justbeathit.com/game/karakaku" passHref>
                 <button>
-                  <p>&#129122;</p> Jouer
+                  <p>                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M7.96722 0.925476C7.64992 1.24278 7.64992 1.75722 7.96722 2.07452L13.0802 7.1875H1.50008C1.05135 7.1875 0.687581 7.55127 0.687581 8C0.687581 8.44873 1.05135 8.8125 1.50008 8.8125H13.0802L7.96722 13.9255C7.64992 14.2428 7.64992 14.7572 7.96722 15.0745C8.28452 15.3918 8.79897 15.3918 9.11627 15.0745L15.6163 8.57452C15.9336 8.25722 15.9336 7.74278 15.6163 7.42548L9.11627 0.925476C8.79897 0.608175 8.28452 0.608175 7.96722 0.925476Z" fill="#FFF6F1" />
+                  </svg></p> Jouer
                 </button>
-                </Link>
+              </Link>
             </div>
             <div className="actuCard3">
               <div>
                 <Image src="/assets/img/team.svg" alt="Équipe JBH" width={300} height={200} />
                 <p>Découvre l&apos;équipe JBH</p>
                 <Link href="https://play.justbeathit.com" passHref>
-                <button>
-                  <p>&#129122;</p> En savoir plus
-                </button>
+                  <button>
+                    <p>                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M7.96722 0.925476C7.64992 1.24278 7.64992 1.75722 7.96722 2.07452L13.0802 7.1875H1.50008C1.05135 7.1875 0.687581 7.55127 0.687581 8C0.687581 8.44873 1.05135 8.8125 1.50008 8.8125H13.0802L7.96722 13.9255C7.64992 14.2428 7.64992 14.7572 7.96722 15.0745C8.28452 15.3918 8.79897 15.3918 9.11627 15.0745L15.6163 8.57452C15.9336 8.25722 15.9336 7.74278 15.6163 7.42548L9.11627 0.925476C8.79897 0.608175 8.28452 0.608175 7.96722 0.925476Z" fill="#FFF6F1" />
+                    </svg></p> En savoir plus
+                  </button>
                 </Link>
               </div>
               <div>
                 <p>découvrez la roadmap</p>
                 <Link href="https://play.justbeathit.com" passHref>
-                <button>
-                  <p>&#129122;</p> En savoir plus
-                </button>
+                  <button>
+                    <p>                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M7.96722 0.925476C7.64992 1.24278 7.64992 1.75722 7.96722 2.07452L13.0802 7.1875H1.50008C1.05135 7.1875 0.687581 7.55127 0.687581 8C0.687581 8.44873 1.05135 8.8125 1.50008 8.8125H13.0802L7.96722 13.9255C7.64992 14.2428 7.64992 14.7572 7.96722 15.0745C8.28452 15.3918 8.79897 15.3918 9.11627 15.0745L15.6163 8.57452C15.9336 8.25722 15.9336 7.74278 15.6163 7.42548L9.11627 0.925476C8.79897 0.608175 8.28452 0.608175 7.96722 0.925476Z" fill="#FFF6F1" />
+                    </svg></p> En savoir plus
+                  </button>
                 </Link>
               </div>
             </div>
@@ -132,9 +144,11 @@ export default function Page() {
                 </ul>
               </div>
               <Link href={"https://play.justbeathit.com/options/subscription"}>
-              <button>
-                <p>&#129122;</p> S&apos;inscrire
-              </button>
+                <button>
+                  <p>                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M7.96722 0.925476C7.64992 1.24278 7.64992 1.75722 7.96722 2.07452L13.0802 7.1875H1.50008C1.05135 7.1875 0.687581 7.55127 0.687581 8C0.687581 8.44873 1.05135 8.8125 1.50008 8.8125H13.0802L7.96722 13.9255C7.64992 14.2428 7.64992 14.7572 7.96722 15.0745C8.28452 15.3918 8.79897 15.3918 9.11627 15.0745L15.6163 8.57452C15.9336 8.25722 15.9336 7.74278 15.6163 7.42548L9.11627 0.925476C8.79897 0.608175 8.28452 0.608175 7.96722 0.925476Z" fill="#FFF6F1" />
+                  </svg></p> S&apos;inscrire
+                </button>
               </Link>
             </div>
             <div className="tarifCard">
@@ -154,10 +168,21 @@ export default function Page() {
                 </ul>
               </div>
               <Link href={"https://play.justbeathit.com/options/subscription"}>
-              <button>
-                <p>&#129122;</p>
-                <p>S&apos;abonner</p>
-              </button>
+                <button>
+                  <p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="10%" stopColor="#872F74" />
+                          <stop offset="60%" stopColor="#E23145" />
+                          <stop offset="100%" stopColor="#FA9D4F" />
+                        </linearGradient>
+                      </defs>
+                      <path fillRule="evenodd" clipRule="evenodd" d="M7.96722 0.925476C7.64992 1.24278 7.64992 1.75722 7.96722 2.07452L13.0802 7.1875H1.50008C1.05135 7.1875 0.687581 7.55127 0.687581 8C0.687581 8.44873 1.05135 8.8125 1.50008 8.8125H13.0802L7.96722 13.9255C7.64992 14.2428 7.64992 14.7572 7.96722 15.0745C8.28452 15.3918 8.79897 15.3918 9.11627 15.0745L15.6163 8.57452C15.9336 8.25722 15.9336 7.74278 15.6163 7.42548L9.11627 0.925476C8.79897 0.608175 8.28452 0.608175 7.96722 0.925476Z" fill="url(#arrowGradient)" />
+                    </svg>
+                  </p>
+                  <p>S&apos;abonner</p>
+                </button>
               </Link>
             </div>
           </span>

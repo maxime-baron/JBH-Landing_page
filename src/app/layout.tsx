@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Just Beat Hit',
-  description: "Joue en rythme, affronte d'autres joueurs et fais exploser ton score dans ce jeu musical en ligne palpitant.",
+  description: "Joue en rythme, affronte d&apos;autres joueurs et fais exploser ton score dans ce jeu musical en ligne palpitant.",
   other: {
     google: 'notranslate',
   }
